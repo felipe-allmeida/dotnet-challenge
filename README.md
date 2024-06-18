@@ -1,4 +1,4 @@
-# Desafio Backend Mottu
+# Desafio Backend
 
 ## Visão Geral
 Este projeto é um sistema de gestão de aluguel de motocicletas e entregas desenvolvido em C# .NET 8. 
