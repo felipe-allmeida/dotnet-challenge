@@ -178,7 +178,10 @@ namespace BikeRental.API.Extensions
             services.AddScoped<IRentalQueryRepository, RentalQueryRepository>();
 
             services.AddScoped<IDeliveryRequestRepository, DeliveryRequestRepository>();
+            services.AddScoped<IDeliveryRequestQueryRepository, DeliveryRequestQueryRepository>();
+
             services.AddScoped<IDeliveryRequestNotificationRepository,  DeliveryRequestNotificationRepository>();
+            services.AddScoped<IDeliveryRequestNotificationQueryRepository, DeliveryRequestNotificationQueryRepository>();
 
             services.AddJwtAuthentication(configuration);
 

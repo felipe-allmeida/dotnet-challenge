@@ -12,7 +12,7 @@ using BikeRental.Application.DTOs.V1;
 using BikeRental.Application.Queries.V1.Admin.GetBikes;
 using BikeRental.Application.Queries.V1.Admin.GetBike;
 
-namespace BikeRental.API.Areas.Admin.Controllers
+namespace BikeRental.API.Areas.V1.Admin.Controllers
 {
     [Area("admin")]
     [ApiController]
@@ -42,7 +42,7 @@ namespace BikeRental.API.Areas.Admin.Controllers
         {
             var result = await _mediator.Send(new GetBikeQuery { Id = id });
 
-            if (result is null) 
+            if (result is null)
                 return NotFound();
 
             return Ok(result);

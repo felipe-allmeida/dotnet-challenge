@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BikeRental.Data.QueryRepositories
 {
+
     public class DeliveryRiderQueryRepository : IDeliveryRiderQueryRepository
     {
         private readonly BikeRentalContext _context;

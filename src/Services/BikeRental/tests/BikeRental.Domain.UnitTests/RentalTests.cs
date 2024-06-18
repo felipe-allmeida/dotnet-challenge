@@ -1,3 +1,4 @@
+using BikeRental.Domain.Enums;
 using BikeRental.Domain.Exceptions;
 using BikeRental.Domain.Models.RentalAggregate;
 
@@ -5,6 +6,57 @@ namespace BikeRental.Domain.UnitTests
 {
     public class RentalTests
     {
+        [Fact]
+        public void MarkAsInProgress_RentalIsPending_StatusChanged()
+        {
+            // Arrange
+            var rental = new Rental(1, 1, DateTimeOffset.UtcNow, DateTimeOffset.UtcNow.AddDays(7), DateTimeOffset.UtcNow.AddDays(7));
+
+            // Act
+            rental.MarkAsInProgress();
+
+            // Assert
+            Assert.Equal(ERentalStatus.InProgress, rental.Status);
+        }
+
+        [Fact]
+        public void MarkAsInProgress_RentalIsInProgress_ExceptionThrown()
+        {
+            // Arrange
+            var rental = new Rental(1, 1, DateTimeOffset.UtcNow, DateTimeOffset.UtcNow.AddDays(7), DateTimeOffset.UtcNow.AddDays(7));
+            rental.MarkAsInProgress();
+
+            // Act
+            // Assert
+            Assert.Throws<DomainException>(() => rental.MarkAsInProgress());
+        }
+
+        [Fact]
+        public void MarkAsCompleted_RentalIsInProgress_StatusChanged()
+        {
+            // Arrange
+            var rental = new Rental(1, 1, DateTimeOffset.UtcNow, DateTimeOffset.UtcNow.AddDays(7), DateTimeOffset.UtcNow.AddDays(7));
+            rental.MarkAsInProgress();
+
+            // Act
+            rental.MarkAsCompleted();
+
+            // Assert
+            Assert.Equal(ERentalStatus.Completed, rental.Status);
+        }
+
+        [Fact]
+        public void MarkAsCompleted_RentalIsPending_ExceptionThrown()
+        {
+            // Arrange
+            var rental = new Rental(1, 1, DateTimeOffset.UtcNow, DateTimeOffset.UtcNow.AddDays(7), DateTimeOffset.UtcNow.AddDays(7));
+
+            // Act
+            // Assert
+            Assert.Throws<DomainException>(() => rental.MarkAsCompleted());
+        }
+
+
         [Fact]
         public void CalculatePrice_7DaysRental_NoPenalty()
         {

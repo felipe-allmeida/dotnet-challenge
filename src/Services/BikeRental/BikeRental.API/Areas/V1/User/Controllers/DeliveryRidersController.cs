@@ -11,7 +11,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BikeRental.API.Areas.User.Controllers
+namespace BikeRental.API.Areas.V1.User.Controllers
 {
     [Area("user")]
     [ApiController]

@@ -68,15 +68,40 @@ O projeto utiliza o padrão de design Command Query Responsibility Segregation (C
 - **Commands**: Utilizados para ações que alteram o estado do sistema, como cadastrar um pedido, aceitar um pedido e finalizar uma entrega.
 - **Queries**: Utilizados para buscar dados do sistema, como consultar pedidos e entregadores notificados.
 
-## Add migration
+
+## Pré-requisitos
+
+Antes de começar, verifique se você possui os seguintes pré-requisitos instalados:
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [Docker](https://www.docker.com/get-started)
+
+### Passo 1: Verificar os pré requisitos
+Para verificar se o .NET 8 está corretamente instalado, abra o terminal (ou prompt de comando) e digite:
+```bash
+dotnet --version
+```
+
+Para verificar se o Docker está corretamente instalado, abra o terminal (ou prompt de comando) e digite:
+```bash
+docker --version
+```
+
+### Passo 2: Clonar o repositório
+Para clonar o repositório, abra o terminal (ou prompt de comando) e digite:
+```bash
+git clone https://github.com/felipe-allmeida/dotnet-challenge.git
+```
+
+### Passo 3: Rodar o docker-compose
+Para rodar o docker-compose, abra o terminal (ou prompt de comando) e digite:
+```bash
+docker-compose up -d
+```
+
+### Comandos Úteis durante o desenvolvimento
+
+## Adicionar migração
 
 dotnet ef migrations add Initial_Create --context BikeRentalContext --project ./src/Services/BikeRental/BikeRental.Data/BikeRental.Data.csproj --startup-project ./src/Services/BikeRental/BikeRental.API/BikeRental.API.csproj -o Migrations
 dotnet ef migrations add Initial_Create --context IntegrationEventLogContext --project ./src/CrossCutting/EventBus/BikeRental.CrossCutting.IntegrationEventLog/BikeRental.CrossCutting.IntegrationEventLog.csproj --startup-project ./src/Services/BikeRental/BikeRental.API/BikeRental.API.csproj -o Migrations
-
-## Remove Migration
-dotnet ef migrations remove --context BikeRentalContext --project ./src/Services/BikeRental/BikeRental.Data/BikeRental.Data.csproj --startup-project ./src/Services/BikeRental/BikeRental.API/BikeRental.API.csproj
-
-## Publish added migrations
-
-dotnet ef database update --context BikeRentalContext --project ./src/BikeRental.API/BikeRental.API.csproj
-dotnet ef database update --context IntegrationEventLogContext --project ./src/Services/BikeRental/BikeRental.API/BikeRental.API.csproj --startup-project ./src/Services/BikeRental/BikeRental.API/BikeRental.API.csproj
