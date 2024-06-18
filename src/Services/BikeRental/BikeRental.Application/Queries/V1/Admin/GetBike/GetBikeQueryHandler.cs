@@ -18,7 +18,7 @@ namespace BikeRental.Application.Queries.V1.Admin.GetBike
         {
             return await _queryRepository.GetAll()
                 .IgnoreQueryFilters()
-                .Where(x => x.Id == x.Id)
+                .Where(x => x.Id == request.Id)
                 .Select(x => new BikeDto
                 {
                     Id = x.Id,

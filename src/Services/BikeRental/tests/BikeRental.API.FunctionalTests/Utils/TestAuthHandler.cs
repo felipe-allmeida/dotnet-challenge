@@ -6,7 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 
-namespace BikeRenta.API.FunctionalTests.Utils
+namespace BikeRental.API.FunctionalTests.Utils
 {
     public class TestAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

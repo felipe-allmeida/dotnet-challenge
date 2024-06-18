@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BikeRenta.API.FunctionalTests.Utils
+namespace BikeRental.API.FunctionalTests.Utils
 {
     public class MockFile
     {

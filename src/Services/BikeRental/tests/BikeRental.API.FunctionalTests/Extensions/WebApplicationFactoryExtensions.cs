@@ -1,11 +1,11 @@
-﻿using BikeRenta.API.FunctionalTests.Utils;
+﻿using BikeRental.API.FunctionalTests.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http.Headers;
 
-namespace BikeRenta.API.FunctionalTests.Extensions
+namespace BikeRental.API.FunctionalTests.Extensions
 {
     public static class WebApplicationFactoryExtensions
     {

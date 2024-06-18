@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace BikeRenta.API.FunctionalTests.Extensions
+namespace BikeRental.API.FunctionalTests.Extensions
 {
     public static class HttpResponseMessageExtension
     {

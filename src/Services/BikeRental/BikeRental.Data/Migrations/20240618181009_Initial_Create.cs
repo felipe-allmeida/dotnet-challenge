@@ -360,13 +360,6 @@ namespace BikeRental.Data.Migrations
                 column: "Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_bikes_Plate",
-                schema: "bike_rental",
-                table: "bikes",
-                column: "Plate",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_bikes_UpdatedAt",
                 schema: "bike_rental",
                 table: "bikes",

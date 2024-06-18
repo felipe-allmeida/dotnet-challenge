@@ -72,9 +72,6 @@ namespace BikeRental.Data.Migrations
 
                     b.HasIndex("Id");
 
-                    b.HasIndex("Plate")
-                        .IsUnique();
-
                     b.HasIndex("UpdatedAt")
                         .IsDescending();
 

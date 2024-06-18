@@ -1,11 +1,11 @@
-﻿using BikeRenta.API.FunctionalTests.Utils;
+﻿using BikeRental.API.FunctionalTests.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BikeRenta.API.FunctionalTests.Factories
+namespace BikeRental.API.FunctionalTests.Factories
 {
     public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
@@ -28,9 +28,11 @@ namespace BikeRenta.API.FunctionalTests.Factories
 
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Test");
             builder.ConfigureTestServices(services =>
             {
                 services
+                    
                     .AddAuthentication(x =>
                     {
                         x.DefaultAuthenticateScheme = TestAuthHandler.AuthenticationScheme;

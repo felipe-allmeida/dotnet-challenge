@@ -1,4 +1,4 @@
-﻿namespace BikeRenta.API.FunctionalTests.Utils
+﻿namespace BikeRental.API.FunctionalTests.Utils
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
     public class TestPriorityAttribute : Attribute

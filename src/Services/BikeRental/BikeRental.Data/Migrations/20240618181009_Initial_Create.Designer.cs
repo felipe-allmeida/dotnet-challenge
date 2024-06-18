@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BikeRental.Data.Migrations
 {
     [DbContext(typeof(BikeRentalContext))]
-    [Migration("20240618022353_Initial_Create")]
+    [Migration("20240618181009_Initial_Create")]
     partial class Initial_Create
     {
         /// <inheritdoc />
@@ -74,9 +74,6 @@ namespace BikeRental.Data.Migrations
                         .IsDescending();
 
                     b.HasIndex("Id");
-
-                    b.HasIndex("Plate")
-                        .IsUnique();
 
                     b.HasIndex("UpdatedAt")
                         .IsDescending();

@@ -1,7 +1,7 @@
 ﻿using Xunit.Abstractions;
 using Xunit.Sdk;
 
-namespace BikeRenta.API.FunctionalTests.Utils
+namespace BikeRental.API.FunctionalTests.Utils
 {
     public class PriorityOrderer : ITestCaseOrderer
     {

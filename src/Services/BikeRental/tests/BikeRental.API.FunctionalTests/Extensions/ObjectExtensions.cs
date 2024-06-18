@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Web;
 
-namespace BikeRenta.API.FunctionalTests.Extensions
+namespace BikeRental.API.FunctionalTests.Extensions
 {
     public static class ObjectExtensions
     {

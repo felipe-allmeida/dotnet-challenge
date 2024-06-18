@@ -1,8 +1,8 @@
-﻿using BikeRenta.API.FunctionalTests.Utils;
+﻿using BikeRental.API.FunctionalTests.Utils;
 using System.Text;
 using System.Text.Json;
 
-namespace BikeRenta.API.FunctionalTests.Extensions
+namespace BikeRental.API.FunctionalTests.Extensions
 {
     public static class HttpClientExtensions
     {

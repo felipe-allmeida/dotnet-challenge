@@ -16,7 +16,6 @@ namespace BikeRental.Data.EntityTypeConfiguration
             builder.HasIndex(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
-            builder.HasIndex(x => x.Plate).IsUnique();
             builder.HasIndex(x => x.CreatedAt).IsDescending(true);
             builder.HasIndex(x => x.UpdatedAt).IsDescending(true);
             builder.HasIndex(x => x.DeletedAt).IsDescending(true);

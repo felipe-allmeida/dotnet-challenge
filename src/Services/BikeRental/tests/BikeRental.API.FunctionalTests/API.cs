@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace BikeRenta.API.FunctionalTests
+namespace BikeRental.API.FunctionalTests
 {
     public static class API
     {
