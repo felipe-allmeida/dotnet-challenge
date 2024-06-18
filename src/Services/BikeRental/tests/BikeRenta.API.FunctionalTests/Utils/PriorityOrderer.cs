@@ -1,16 +1,8 @@
 ﻿using Xunit.Abstractions;
 using Xunit.Sdk;
 
-namespace BikeRenta.API.FunctionalTests
+namespace BikeRenta.API.FunctionalTests.Utils
 {
-    [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-    public class TestPriorityAttribute : Attribute
-    {
-        public int Priority { get; private set; }
-
-        public TestPriorityAttribute(int priority) => Priority = priority;
-    }
-
     public class PriorityOrderer : ITestCaseOrderer
     {
         public IEnumerable<TTestCase> OrderTestCases<TTestCase>(

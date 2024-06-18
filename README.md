@@ -68,7 +68,6 @@ O projeto utiliza o padrão de design Command Query Responsibility Segregation (C
 - **Commands**: Utilizados para ações que alteram o estado do sistema, como cadastrar um pedido, aceitar um pedido e finalizar uma entrega.
 - **Queries**: Utilizados para buscar dados do sistema, como consultar pedidos e entregadores notificados.
 
-
 ## Pré-requisitos
 
 Antes de começar, verifique se você possui os seguintes pré-requisitos instalados:

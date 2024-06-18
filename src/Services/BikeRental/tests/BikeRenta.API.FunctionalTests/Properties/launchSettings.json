@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BikeRenta.API.FunctionalTests": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

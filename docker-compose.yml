@@ -10,6 +10,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=80
       - ASPNETCORE_HTTPS_PORTS=81
+    restart: always  # This line specifies the restart policy
     ports:
       - 5100:80
       - 9100:81
@@ -71,7 +72,7 @@ services:
       - 5672:5672
       - 15672:15672 # Web UI
     networks:
-      - app-network
+      - app-network  
 
 volumes:
   sqldata:
@@ -87,4 +88,5 @@ networks:
   app-network:
     name: app-network
     driver: bridge
+
 
